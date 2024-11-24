@@ -29,7 +29,7 @@ const updateUser = () => {
     const res = await axios.put(`http://localhost:5000/user/update/${id}`);
     if (res.status === 200) {
       toast.success('user updated successfully');
-      router.push('/users')
+      router.push('/manage_user')
     }
     console.log(res.status);
     
