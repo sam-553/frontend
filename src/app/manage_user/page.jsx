@@ -14,9 +14,11 @@ const ManageUser = () => {
       setUserList(res.data);
       setLoading(false)
     }
+    
     useEffect(()=>{
         fetchUsers();
     },[]);
+
     const deleteUser=async(id)=>{
         if(!confirm('are you sure you to to delete this user')) return;
         const res=await axios.delete(`http://localhost:5000/user/delete/${id}`)
